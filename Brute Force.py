@@ -38,7 +38,4 @@ for P_assword in password :
         
     else :
         print(r.text,"Error Password :",P_assword)
-    
 
-# R135724465@taalim.ma
-# Saad..2020
