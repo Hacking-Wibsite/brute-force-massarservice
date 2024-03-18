@@ -1,4 +1,4 @@
-# brute-forc-on-password-website-https://massarservice.men.gov.ma/moutamadris/Account/login
+# brute-forc-massarservice
 
 
 1- تحميل برنامج python على حاسوب أو كمبيوتر
